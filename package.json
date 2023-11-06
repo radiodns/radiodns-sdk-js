@@ -1,0 +1,27 @@
+{
+  "name": "@radiodns/core",
+  "version": "0.1.0",
+  "description": "Construct and resolve radio bearer objects from and to a number of standardised formats, defined in the RadioDNS hybrid radio technical standard ETSI TS 103 270",
+  "homepage": "https://github.com/radiodns/radiodns-sdk-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radiodns/radiodns-sdk-js"
+  },
+  "author": "Andy Buckingham <andy.buckingham@radiodns.org>",
+  "main": "src/index.mjs",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "generate-country": "node scripts/gen-country.mjs",
+    "lint": "eslint .",
+    "test": "tap test/unit"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "eslint": "^8.53.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "tap": "^18.5.7"
+  }
+}
