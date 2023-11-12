@@ -1,6 +1,6 @@
 {
   "name": "@radiodns/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Construct and resolve radio bearer objects from and to a number of standardised formats, defined in the RadioDNS hybrid radio technical standard ETSI TS 103 270",
   "homepage": "https://github.com/radiodns/radiodns-sdk-js",
   "repository": {
