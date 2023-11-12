@@ -80,25 +80,10 @@ t.test('IBOCBearer.mid', (t) => {
 });
 
 t.test('IBOCBearer.toUri', (t) => {
-  const [{
-    uri,
-    params: {
-      cc,
-      tx,
-      mid,
-    },
-  }] = validBearers;
-  const bearer = new IBOCBearer(cc, tx, mid);
-
-  const noMidParams = validBearers.find(({ params }) => !params.mid);
-  const noMidBearer = new IBOCBearer(
-    noMidParams.params.cc,
-    noMidParams.params.tx,
-    noMidParams.params.mid,
-  );
-
-  t.equal(bearer.toUri(), uri, 'can generate URI string');
-  t.equal(noMidBearer.toUri(), noMidParams.uri, 'can generate URI string without mid');
+  validBearers.forEach(({ uri, params }) => {
+    const bearer = new IBOCBearer(params.cc, params.tx, params.mid);
+    t.equal(bearer.toUri(), uri, 'can generate URI string');
+  });
 
   t.end();
 });

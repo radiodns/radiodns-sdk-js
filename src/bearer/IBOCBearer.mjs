@@ -104,7 +104,7 @@ export default class IBOCBearer extends AbstractBearer {
 
   toParams() {
     return [
-      this.cc.toString(16),
+      this.cc.toString(16).padStart(3, 0),
       this.tx.toString(16).padStart(5, 0),
       ...this.mid !== null ? [this.mid] : [],
     ];

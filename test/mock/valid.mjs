@@ -119,6 +119,15 @@ export const iboc = [
       mid: null,
     },
   },
+  {
+    uri: 'hd:040.0006b.3',
+    fqdn: '3.0006b.040.hd.radiodns.org',
+    params: {
+      cc: 0x040,
+      tx: 0x0006b,
+      mid: 3,
+    },
+  },
 ];
 
 // concatenate all valid bearers for easy iteration
